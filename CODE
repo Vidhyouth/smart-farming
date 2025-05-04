@@ -1,0 +1,29 @@
+from azure.iot.device import IoTHubDeviceClient, Message
+import random
+import time
+
+CONNECTION_STRING = "<your_device_connection_string>"
+
+def simulate_sensor_data():
+    temperature = random.uniform(20, 35)
+    humidity = random.uniform(40, 70)
+    soil_moisture = random.uniform(20, 60)
+    return {
+        "temperature": temperature,
+        "humidity": humidity,
+        "soil_moisture": soil_moisture
+    }
+
+def main():
+    client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING)
+    print("Sending data to IoT Hub...")
+
+    while True:
+        data = simulate_sensor_data()
+        message = Message(str(data))
+        client.send_message(message)
+        print("Sent message:", data)
+        time.sleep(5)
+
+if _name_ == "_main_":
+    main()
