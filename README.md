@@ -1,3 +1,3 @@
 Topic - Smart Farming 
 DESCRIPTION - Smart Farming Dashboard is a digital platform designed to help farmers make informed decisions by providing real-time data and AI-powered insights. This dashboard integrates various data sources like weather forecasts, soil conditions, and satellite imagery to monitor crop health and environmental factors. Using artificial intelligence, it can analyze historical data and current trends to give personalized recommendations on what crops to plant next based on climate, soil quality, and market demand. The goal is to increase agricultural productivity, reduce resource waste, and make farming more sustainable and efficient.
-WE USED AZURE OPEN AI 
+ 
